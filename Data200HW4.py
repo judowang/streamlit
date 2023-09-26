@@ -10,12 +10,14 @@ fig, ax = plt.subplots()
 
 df.groupby(['name'])[['petal_length','petal_width']].mean().plot.bar(ax=ax)
 
-ax.set_xlabel('Name')
+ax.set_xlabel('Species')
 ax.set_ylabel('Measurements')
 ax.set_title('Average Petal Length and Width by Species')
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
-st.write('Dataframe:')
+st.write('We note that the Colorado Lotus is the largest, followed by the bluebells, then violets.')
+
+st.write('**Detailed Data View:**')
 
 st.write(df)
