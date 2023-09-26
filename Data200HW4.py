@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('mountain_flowers.csv')
 
+st.write('This bar chart shows the average petal length and width for each flower.')
+
 fig, ax = plt.subplots()
 
 df.groupby(['name'])[['petal_length','petal_width']].mean().plot.bar(ax=ax)
