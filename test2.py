@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 
 df = pd.read_csv('shopping_trends_updated.csv')
-display(df)
+#display(df)
 cat = round(df['Category'].value_counts()/df.shape[0],2)
 gen = df.groupby(['Gender','Category']).size()
 test = []
